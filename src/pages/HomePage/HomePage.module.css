@@ -5,10 +5,6 @@
     margin: 10% 0px;
 }
 
-.left-section {
-    width: 40%;
-}
-
 .right-section {
     display: flex;
     flex-direction: column;
