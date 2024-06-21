@@ -1,15 +1,21 @@
 .recipe-container {
     display: flex;
+    justify-content: space-between;
     margin: 30px;
     border: 1px solid gray;
     border-radius: 30px;
     padding: 10px;
 }
 
+.left-container {
+    display: flex;
+}
+
 .recipe-image {
     height: 300px;
     width: 300px;
     border-radius: 30px;
+    cursor: pointer;
 }
 
 .recipes-info-container {
@@ -24,8 +30,18 @@
     font-weight: bold;
 }
 
-.recipe-difficulty {}
+.recipe-comments-container {
+    display: flex;
+    align-items: flex-end;
+}
 
-.recipe-instruction {}
-
-.recipe-ingredient {}
+.recipe-comments {
+    display: flex;
+    align-items: center;
+    padding: 3px 10px;
+    height: 45px;
+    color: white;
+    background-color: red;
+    border-radius: 20px;
+    cursor: pointer;
+}
