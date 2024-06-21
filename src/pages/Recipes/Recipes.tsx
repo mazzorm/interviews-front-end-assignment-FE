@@ -22,13 +22,13 @@ export default function Recipes() {
             {
                 recipes.map((recipe: any, index: any) => (
                     <div key={index}>
-                        <img src={recipe.image} />
-                        <div>{recipe.name}</div>
-                        <div>Difficolta piatto {recipe.difficultyId}</div>
-                        <div>Istruzioni {recipe.instructions}</div>
+                        <img src={recipe.image} className={RecipesCss["recipe-image"]} />
+                        <div className={RecipesCss["recipe-name"]}>{recipe.name}</div>
+                        <div className={RecipesCss["recipe-difficulty"]}>Difficolta piatto {recipe.difficultyId}</div>
+                        <div className={RecipesCss["recipe-instruction"]}>Istruzioni {recipe.instructions}</div>
                         {
                           recipe.ingredients.map((ingredient: any) => (
-                            <li>{ingredient}</li>
+                            <li className={RecipesCss["recipe-ingredient"]}>{ingredient}</li>
                         )) 
                         }
                     </div>
