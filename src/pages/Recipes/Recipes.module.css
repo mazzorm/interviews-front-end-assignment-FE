@@ -1,6 +1,28 @@
-.recipe-image {}
+.recipe-container {
+    display: flex;
+    margin: 30px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    padding: 10px;
+}
 
-.recipe-name {}
+.recipe-image {
+    height: 300px;
+    width: 300px;
+    border-radius: 30px;
+}
+
+.recipes-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 15px;
+}
+
+.recipe-name {
+    font-size: 30px;
+    font-weight: bold;
+}
 
 .recipe-difficulty {}
 
