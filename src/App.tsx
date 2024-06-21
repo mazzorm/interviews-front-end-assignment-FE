@@ -4,6 +4,7 @@ import Home from './pages/HomePage/HomePage';
 import Recipes from './pages/Recipes/Recipes';
 import Header from './components/Header/Header';
 import AddRecipes from './pages/AddRecipes/AddRecipes';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/recipes" element={<Recipes />} />
           <Route path="/add-recipes" element={<AddRecipes />} />
         </Routes>
+        {/* <Footer /> */}
       </Router>
     </>
   )
