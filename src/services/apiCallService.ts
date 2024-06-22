@@ -6,20 +6,19 @@ export class ApiService {
     }
 
     protected constructor() {
-        if (!ApiService._singleton) { 
+        if (!ApiService._singleton) {
             ApiService._singleton = this;
         }
     }
 
     navigationPageById: string = '';
 
-    // Inserimento delle chiamate api verso il server locale nella porta 8080
     async getRecipes() {
         try {
             const response = await fetch('http://localhost:8080/recipes');
             const data = await response.json();
-            return data; 
-        } 
+            return data;
+        }
         catch (error) {
             console.error('Errore durante la richiesta:', error);
         }
@@ -29,8 +28,8 @@ export class ApiService {
         try {
             const response = await fetch('http://localhost:8080/comments');
             const data = await response.json();
-            return data; 
-        } 
+            return data;
+        }
         catch (error) {
             console.error('Errore durante la richiesta:', error);
         }
@@ -40,19 +39,19 @@ export class ApiService {
         try {
             const response = await fetch('http://localhost:8080/cuisines');
             const data = await response.json();
-            return data; 
-        } 
+            return data;
+        }
         catch (error) {
             console.error('Errore durante la richiesta:', error);
         }
     }
-    
+
     async getDifficulties() {
         try {
             const response = await fetch('http://localhost:8080/difficulties');
             const data = await response.json();
-            return data; 
-        } 
+            return data;
+        }
         catch (error) {
             console.error('Errore durante la richiesta:', error);
         }
@@ -60,10 +59,10 @@ export class ApiService {
 
     async getDiets() {
         try {
-            const response = await fetch('http://localhost:8080/difficulties');
+            const response = await fetch('http://localhost:8080/diets');
             const data = await response.json();
-            return data; 
-        } 
+            return data;
+        }
         catch (error) {
             console.error('Errore durante la richiesta:', error);
         }

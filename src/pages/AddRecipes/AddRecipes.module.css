@@ -1,0 +1,25 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.add-recipes-input {
+    margin: 15px 0px;
+    height: 35px;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    margin: 0px auto;
+    cursor: pointer;
+}
