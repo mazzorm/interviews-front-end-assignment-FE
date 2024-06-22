@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { ApiService } from "../../services/apiCallService";
 import RecipesCss from './Recipes.module.css'
+import { useNavigate } from 'react-router-dom'; 
 
 export default function Recipes() {
 
@@ -8,6 +9,7 @@ export default function Recipes() {
     const baseUrl: String = 'http://localhost:8080';
 
     const [recipes, setRecipes] = useState([]);
+    const navigate = useNavigate(); // Utilizza useHistory
 
     useEffect(() => {
         const fethData = async () => {
@@ -16,6 +18,12 @@ export default function Recipes() {
         }
         fethData();
     }, []) 
+
+
+    const navigateToDetails = (id: string) => {
+        apiService.navigationPageById = id;
+        navigate(`/recipes/detail`);
+    };
 
 
     return (
@@ -40,7 +48,7 @@ export default function Recipes() {
                         </div>
 
                         <div className={RecipesCss["recipe-comments-container"]}>
-                            <div className={RecipesCss["recipe-comments"]}>mostra recensioni</div>
+                            <div className={RecipesCss["recipe-comments"]} onClick={() => navigateToDetails(recipe.id)}>Mostra recensioni</div>
                         </div>
                     </div>
                 ))

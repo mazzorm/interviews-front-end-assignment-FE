@@ -11,59 +11,61 @@ export class ApiService {
         }
     }
 
+    navigationPageById: string = '';
+
     // Inserimento delle chiamate api verso il server locale nella porta 8080
     async getRecipes() {
         try {
             const response = await fetch('http://localhost:8080/recipes');
-            const data = await response.json(); // Parse JSON dalla risposta
+            const data = await response.json();
             return data; 
         } 
         catch (error) {
-            console.error('Errore durante la richiesta:', error); // Gestione degli errori
+            console.error('Errore durante la richiesta:', error);
         }
     }
 
     async getComments() {
         try {
             const response = await fetch('http://localhost:8080/comments');
-            const data = await response.json(); // Parse JSON dalla risposta
+            const data = await response.json();
             return data; 
         } 
         catch (error) {
-            console.error('Errore durante la richiesta:', error); // Gestione degli errori
+            console.error('Errore durante la richiesta:', error);
         }
     }
 
     async getCuisines() {
         try {
             const response = await fetch('http://localhost:8080/cuisines');
-            const data = await response.json(); // Parse JSON dalla risposta
+            const data = await response.json();
             return data; 
         } 
         catch (error) {
-            console.error('Errore durante la richiesta:', error); // Gestione degli errori
+            console.error('Errore durante la richiesta:', error);
         }
     }
     
     async getDifficulties() {
         try {
             const response = await fetch('http://localhost:8080/difficulties');
-            const data = await response.json(); // Parse JSON dalla risposta
+            const data = await response.json();
             return data; 
         } 
         catch (error) {
-            console.error('Errore durante la richiesta:', error); // Gestione degli errori
+            console.error('Errore durante la richiesta:', error);
         }
     }
 
     async getDiets() {
         try {
             const response = await fetch('http://localhost:8080/difficulties');
-            const data = await response.json(); // Parse JSON dalla risposta
+            const data = await response.json();
             return data; 
         } 
         catch (error) {
-            console.error('Errore durante la richiesta:', error); // Gestione degli errori
+            console.error('Errore durante la richiesta:', error);
         }
     }
 
