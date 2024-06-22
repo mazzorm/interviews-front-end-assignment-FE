@@ -8,7 +8,6 @@ export default function RecipeDetailsPage() {
 
     const apiService: ApiService = ApiService.singleton;
     const recipesToGet: number = Number(apiService.navigationPageById);
-    console.log(recipesToGet);
 
     const baseUrl: string = 'http://localhost:8080';
 
@@ -36,26 +35,28 @@ export default function RecipeDetailsPage() {
         <>
             <div className={RecipeDetailsPageCss['details-container']}>
 
-                <div className={RecipeDetailsPageCss['image-container']}>
-                    <img src={`${baseUrl}${recipes.image}`} />
-                </div>
+                <img src={`${baseUrl}${recipes.image}`}  className={RecipeDetailsPageCss['image-container']}/>
 
                 <div className={RecipeDetailsPageCss['info-container']}>
                     <div>{recipes.name}</div>
-                    <div>{recipes.difficultyId}</div>
-                    <div>{recipes.instructions}</div>
-
+                    <div>Difficolta: {recipes.difficultyId}</div>
+                    <div>Istruzioni: {recipes.instructions}</div>
+                    
+                    <div className={RecipeDetailsPageCss['ingredients-container']}>
                     {
-                        ingredients.map((ingredient: any) => (
-                            <li>{ingredient}</li>
+                        ingredients.map((ingredient: any) => (    
+                                <li>{ingredient} </li>
                         ))
                     }
+                    </div>
+
 
                 </div>
             </div>
 
 
             <div className={RecipeDetailsPageCss['comments-container']}>
+                <div>Commenti:</div>
 
                 {
                     comments.map((comment: any) => (
@@ -66,6 +67,7 @@ export default function RecipeDetailsPage() {
                         </div>
                     ))
                 }
+
             </div>
         </>
     )

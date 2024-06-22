@@ -1,9 +1,13 @@
+import CommentsCss from './Comments.module.css'
+
 export default function Comments({comment, date, rating}: any) {
     return (
         <>
-            <li>{comment}</li>
-            <li>{date}</li>
-            <li>{rating}</li>
+        <div className={CommentsCss['comments-container']}>
+            <div>{comment}</div>
+            <div>{date}</div>
+            <div>voto {rating}/5</div>
+        </div>
         </>
     )
 }
