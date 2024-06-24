@@ -1,7 +1,13 @@
 import HomePageCss from './HomePage.module.css'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 export default function Home ()  {
+
+    const navigate = useNavigate();
+
+    const navigateTo = (pageName: any) => {
+        navigate(`/${pageName}`);
+    }
 
     return (
         <>
@@ -9,7 +15,7 @@ export default function Home ()  {
                 <div className={HomePageCss["right-section"]}>
                     <div className={HomePageCss["title"]}>Recipe Book</div>
                     <div className={HomePageCss["subtitle"]}>Discover Recipe</div>
-                    <Link to='recipes' className={HomePageCss["explore"]}>Explore</Link>
+                    <div onClick={() => navigateTo('recipes')} className={HomePageCss["explore"]}>Explore</div>
                 </div>
             </div>
         </>
