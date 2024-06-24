@@ -24,6 +24,8 @@ export default function AddRecipes() {
         setNewRecipe({ ...newRecipe, [name]: value });
     };
 
+ 
+
     return (
         <>
             <div className={AddRecipesCss['add-recipes-container']}>
