@@ -33,3 +33,24 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+/* title block for tablet */
+
+@media screen and (max-width: 1070px) {
+
+    .title {
+        font-size: 60px;
+        font-weight: 600;
+    }
+    
+}
+
+/* title block for mobile */
+@media screen and (max-width: 641px) {
+
+    .title {
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+}
