@@ -26,7 +26,6 @@ export default function RecipeDetailsPage() {
             setRecipes(getRecipes[recipesToGet - 1]);
             setIngredients(getIngredients);
             setComments(getComments);
-
         }
         fethData();
     }, [])
