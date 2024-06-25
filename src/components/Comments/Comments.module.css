@@ -1,3 +1,15 @@
 .comments-container {
-    padding: 10px 0px;
+    padding: 10px;
+    border: 1px solid gray;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #f1f1f1;
+}
+
+
+/* card block for mobile */
+
+@media screen and (max-width: 640px) {
+    .comments-container {
+        margin-bottom: 10px;
+    }
 }

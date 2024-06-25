@@ -38,9 +38,9 @@ export default function RecipeDetailsPage() {
                 <img src={`${baseUrl}${recipes.image}`}  className={RecipeDetailsPageCss['image-container']}/>
 
                 <div className={RecipeDetailsPageCss['info-container']}>
-                    <div>{recipes.name}</div>
-                    <div>Difficolta: {recipes.difficultyId}</div>
-                    <div>Istruzioni: {recipes.instructions}</div>
+                    <div className={RecipeDetailsPageCss['info-name']}>{recipes.name}</div>
+                    <div className={RecipeDetailsPageCss['info-detail']}>Difficolta: {recipes.difficultyId}</div>
+                    <div className={RecipeDetailsPageCss['info-detail']}>Istruzioni: {recipes.instructions}</div>
                     
                     <div className={RecipeDetailsPageCss['ingredients-container']}>
                     {
@@ -56,17 +56,18 @@ export default function RecipeDetailsPage() {
 
 
             <div className={RecipeDetailsPageCss['comments-container']}>
-                <div>Commenti:</div>
-
-                {
-                    comments.map((comment: any) => (
-                        <div>
-                            <ReactIf condition={comment.recipeId == recipesToGet}>
-                                <Comments comment={comment.comment} date={comment.date} rating={comment.rating} />
-                            </ReactIf>
-                        </div>
-                    ))
-                }
+                <div className={RecipeDetailsPageCss['comments-title']}>Commenti:</div>
+                <div className={RecipeDetailsPageCss['comments-row']}>
+                    {
+                        comments.map((comment: any) => (
+                            <>
+                                <ReactIf condition={comment.recipeId == recipesToGet}>
+                                    <Comments comment={comment.comment} date={comment.date} rating={comment.rating} />
+                                </ReactIf>
+                            </>
+                        ))
+                    }
+                </div>
 
             </div>
         </>
